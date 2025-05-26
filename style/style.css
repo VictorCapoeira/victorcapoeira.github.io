@@ -217,8 +217,8 @@
     display: inline-block;
     font-size: 17px;
     animation: loopTexto 25s linear infinite; /* velocidade aumentada */
-    font-family: "Bebas Neue", sans-serif;
-    color: black;
+    font-family: 'Fredoka One', cursive;
+    /* color: black; */
     margin: 0;
     white-space: nowrap;
 }
