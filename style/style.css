@@ -1,7 +1,7 @@
 :root {
     --primary: #FF6B8B;
     /* Rosa vibrante */
-    --secondary: #6BD5E1;
+    --secondary: var(--primary);
     /* Azul claro */
     --dark: #2A2D34;
     /* Azul escuro */
@@ -73,6 +73,18 @@ body {
 .card:hover {
     transform: translateY(-10px);
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.card-razao {
+    border-radius: 16px;
+    border: 2px solid #fe39bb;
+    background: #fff;
+    transition: box-shadow 0.3s, border-color 0.3s;
+}
+
+.card-razao:hover {
+    box-shadow: 0 8px 24px rgba(254,57,188,0.10);
+    border-color: var(--primary);
 }
 
 .carousel-img {
@@ -227,6 +239,7 @@ footer {
     position: relative;
     padding-bottom: 15px;
     margin-bottom: 30px;
+    text-transform: uppercase;
 }
 
 .section-title:after {
@@ -259,6 +272,9 @@ footer {
     z-index: 10;
     padding: 10px 0
 }
+.razao-icone, .razao-titulo{
+    color:#fe39bb;
+}
 
 .texto-animado p {
     display: inline-block;
@@ -270,6 +286,7 @@ footer {
     margin: 0;
     white-space: nowrap;
 }
+
 
 @keyframes loopTexto {
     0% {
@@ -306,4 +323,71 @@ footer {
 
 .col-md-4 {
     padding: 0 12px; /* ou ajuste conforme o seu grid */
+}
+
+.razao-icone {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 48px;
+}
+
+.razao-titulo {
+    font-family: 'Fredoka One', cursive;
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+}
+
+.razao-texto {
+    font-size: 1rem;
+    color: #444;
+}
+
+.faq-accordion .accordion-item {
+    background: #f9f9f9;
+    border: 2px solid var(--primary);
+    border-radius: 16px !important;
+    overflow: hidden;
+}
+.faq-accordion .accordion-button {
+    background: var(--primary);
+    color: #2A2D34;
+    font-family: 'Fredoka One', cursive;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 16px !important;
+    box-shadow: none;
+    transition: background 0.2s;
+}
+.faq-accordion .accordion-button:not(.collapsed) {
+    background: var(--primary);
+    color: #fff;
+}
+.faq-accordion .accordion-body {
+    color: #444;
+    font-size: 1rem;
+    background: #fff;
+    border-top: 1px solid #e0e0e0;
+}
+.faq-btn::after {
+    font-family: "Font Awesome 6 Free";
+    content: "\2b";
+    font-weight: 900;
+    float: right;
+    margin-left: auto;
+    color: #fe39bb;
+    background: #fff;
+    border-radius: 8px;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    box-shadow: 0 1px 4px rgba(254,57,188,0.08);
+}
+.faq-btn:not(.collapsed)::after {
+    content: "\f068";
+    background: #fe39bb;
+    color: #fff;
 }
